@@ -1,0 +1,20 @@
+package com.jdbc_test;
+
+public class Student {
+    private String Id;
+    private String Name;
+    private String Sex;
+    private String Age;
+    
+	Student(String name, String sex, String age) {
+		super();
+		Name = name;
+		Sex = sex;
+		Age = age;
+	}
+    
+
+	}
+    
+    
+}

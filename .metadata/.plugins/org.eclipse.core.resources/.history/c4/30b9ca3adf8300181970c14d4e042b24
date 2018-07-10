@@ -1,0 +1,48 @@
+package com.jdbc_test;
+
+public class Student {
+    private String Id;
+    private String Name;
+    private String Sex;
+    private String Age;
+    
+	Student(String name, String sex, String age) {
+		super();
+		Name = name;
+		Sex = sex;
+		Age = age;
+	}
+
+	public String getId() {
+		return Id;
+	}
+
+	public void setId(String id) {
+		Id = id;
+	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public String getSex() {
+		return Sex;
+	}
+
+	public void setSex(String sex) {
+		Sex = sex;
+	}
+
+	public String getAge() {
+		return Age;
+	}
+
+	public void setAge(String age) {
+		Age = age;
+	}
+}
+

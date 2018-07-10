@@ -1,0 +1,7 @@
+package com.karlinglee93.jdbc_tst.test;
+
+public class StudentTest {
+	public static void main(String[] args) {
+	
+	}
+}

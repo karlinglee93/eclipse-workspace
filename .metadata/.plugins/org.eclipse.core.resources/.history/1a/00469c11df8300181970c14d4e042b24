@@ -1,0 +1,64 @@
+package com.jdbc_test;
+
+public class Student {
+    private String Id;
+    private String Name;
+    private String Sex;
+    private String Age;
+    
+	Student(String name, String sex, String age) {
+		super();
+		Name = name;
+		Sex = sex;
+		Age = age;
+	}
+
+	public String getId() {
+		return Id;
+	}
+
+	public void setId(String id) {
+		Id = id;
+	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public String getSex() {
+		return Sex;
+	}
+
+	public void setSex(String sex) {
+		Sex = sex;
+	}
+
+	public String getAge() {
+		return Age;
+	}
+
+	public void setAge(String age) {
+		Age = age;
+	}
+}
+
+private static Connection getConn() {
+    String driver = "com.mysql.jdbc.Driver";
+    String url = "jdbc:mysql://localhost:3306/samp_db";
+    String username = "root";
+    String password = "";
+    Connection conn = null;
+    try {
+        Class.forName(driver); //classLoader,加载对应驱动
+        conn = (Connection) DriverManager.getConnection(url, username, password);
+    } catch (ClassNotFoundException e) {
+        e.printStackTrace();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    return conn;
+}

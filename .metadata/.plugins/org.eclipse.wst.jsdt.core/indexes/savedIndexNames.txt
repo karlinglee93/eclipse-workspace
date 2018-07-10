@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/karlinglee/Documents/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+197793107.index
+2077837820.index
+3996629921.index
+1229657590.index
+4157495364.index
+1873861586.index

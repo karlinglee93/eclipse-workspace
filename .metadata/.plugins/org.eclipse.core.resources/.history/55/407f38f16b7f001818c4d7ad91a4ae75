@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Label</title>
+</head>
+<body>
+
+<form action="main.jsp" method="GET">
+密级level (枚举值):
+<select name="level">
+<option value="0">0: 未加标</option>
+<option value="10">10: 国密公开</option>
+<option value="11">11: 商密公开</option>
+<option value="20">20: 国密内部</option>
+<option value="21">21: 商密内部</option>
+<option value="50">50: 普通商密</option>
+<option value="80">80: 核心商密</option>
+<option value="120">120: 秘密</option>
+<option value="150">150: 机密</option>
+<option value="180">180: 绝密</option>
+</select>
+<br />
+
+保密期限duration (对象)
+<!--不足之处：
+	1）ISO8601 的日期和时间组合表示法必须人工手打；
+	2）period 和declassifiedTime 之间应该存在一定的逻辑关系；
+	3）condition 和其他关键字也应该存在逻辑关系。  -->
+<br />
+1) 电子文件的定密时间classifiedTime (ISO8601 的日期和时间组合表示法): 
+<input type="text" name="classifiedTime" />
+<br />
+2) 保密的时间长度period (长度为6字节):
+<input type="text" name="period" />
+<br />
+3) 应在此日期前解密declassifiedTime (ISO8601 的日期和时间组合表示法):
+<input type="text" name="declassifiedTime" />
+<br />
+4) 解密的具体条件condition (字符串):
+<input type="text" name="condition" />
+<br />
+
+管理状态status (枚举值):
+<select name="status">
+<option value="0">0: 未管理</option>
+<option value="20">20: 忽略</option>
+<option value="50">50: 预定密</option>
+<option value="80">80: 正式定密</option>
+<option value="110">110: 文件签发</option>
+<option value="140">140: 密级变更</option>
+<option value="170">170: 文件解密</option>
+</select>
+<br />
+
+文件起草人drafter (对象)
+<br />
+1) 标识id: 
+<input type="text" name="id" />
+<br />
+2) 名称name:
+<input type="text" name="name" />
+<br />
+
+定密责任人authority (对象)
+<br />
+1) 标识id_authority: 
+<input type="text" name="id_authority" />
+<br />
+2) 名称name_authority:
+<input type="text" name="name_authority" />
+<br />
+
+文件签发人issuer (对象)
+<br />
+1) 标识id_issuer: 
+<input type="text" name="id_issuer" />
+<br />
+2) 名称name_issuer:
+<input type="text" name="name_issuer" />
+<br />
+
+定密单位organs (对象数组)
+<br />
+1) 标识id_organs: 
+<input type="text" name="id_organs" />
+<br />
+2) 名称name_organs:
+<input type="text" name="name_organs" />
+<br />
+
+知悉范围scope (对象)
+<!-- 不足之处：
+	1）staffs/groups/units 为对象数组，其中都包含id & name。
+ -->
+<br />
+1) 描述形式的知悉范围description (数组): 
+<input type="text" name="description" />
+<br />
+2) 知悉人员列表staffs (对象数组):
+<input type="text" name="staffs" />
+<br />
+3) 知悉部门、群 组列表groups (对象数组):
+<input type="text" name="groups" />
+<br />
+4) 知悉单位列表units (对象数组):
+<input type="text" name="units" />
+<br />
+
+定密依据basises
+<!-- 不足之处：
+	1）normalItems 中包含id/name/level/duration/scope/keys。
+ -->
+<br />
+1) 定密依据类型type (枚举值): 
+<select name="type">
+<option value="0">0: 未知类型</option>
+<option value="10">10: 确定性定密事项</option>
+<option value="50">50: 不明确事项</option>
+<option value="90">90: 无权定密事项</option>
+<option value="130">130: 派生定密事项</option>
+</select>
+<br />
+2) 定密依据描述description_basises (字符串):
+<input type="text" name="description_basises" />
+<br />
+3) 具体的定密依据的说明描述列表normalItems (对象数组):
+<input type="text" name="normalItems" />
+<br />
+4) 已定密(派生)事项列表derivedItems (数组):
+<input type="text" name="derivedItems" />
+<br />
+
+管理历史histories
+<!-- 不足之处：
+	1）levelBefore/durationBefore 与先前的取值完全相同，
+		是否可用同一个关键字替代。
+ -->
+<br />
+1) 操作时间time (ISO8601 的日期和时间组合表示法): 
+<input type="text" name="time" />
+<br />
+2) 操作人员姓名staff (字符串):
+<input type="text" name="staff" />
+<br />
+3) 变更操作的具体描述description_histories (字符串):
+<input type="text" name="description_histories" />
+<br />
+4) 解密原因decryptReason (字符串):
+<input type="text" name="decryptReason" />
+<br />
+5) 变更类型type_histories (枚举值): 
+<select name="type_histories">
+<option value="0">0: 秘密等级变更</option>
+<option value="1">1: 保密期限变更</option>
+<option value="3">3: 秘密等级变更及保密期限变更</option>
+</select>
+<br />
+6) 变更前密级levelBefore (枚举值):
+<input type="text" name="levelBefore" />
+<br />
+7) 变更前保密期限durationBefore :
+<input type="text" name="durationBefore" />
+<br />
+
+关键字列表keys (字符串数组):
+<input type="text" name="keys">
+<br />
+
+<input type="submit" value="提交" />
+</form>
+</body>
+</html>

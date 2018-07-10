@@ -1,0 +1,43 @@
+密级level (枚举值):
+
+保密期限duration (对象)
+
+1) 电子文件的定密时间classifiedTime (ISO8601 的日期和时间组合表示法):---
+2) 保密的时间长度period (长度为6字节):
+3) 应在此日期前解密declassifiedTime (ISO8601 的日期和时间组合表示法):---
+4) 解密的具体条件condition (字符串):----
+
+管理状态status (枚举值):--
+文件起草人drafter (对象)--
+1) 标识id:---
+2) 名称name:--
+定密责任人authority (对象)---
+1) 标识id_authority:
+2) 名称name_authority:
+文件签发人issuer (对象)---
+1) 标识id_issuer:
+2) 名称name_issuer:
+定密单位organs (对象数组)---
+1) 标识id_organs:
+2) 名称name_organs:
+
+知悉范围scope (对象)
+1) 描述形式的知悉范围description (数组):
+2) 知悉人员列表staffs (对象数组):
+3) 知悉部门、群 组列表groups (对象数组):
+4) 知悉单位列表units (对象数组):
+
+定密依据basises (对象)
+1) 定密依据类型type (枚举值):
+2) 定密依据描述description_basises (字符串):
+3) 具体的定密依据的说明描述列表normalItems (对象数组):
+4) 已定密(派生)事项列表derivedItems (数组):
+管理历史histories (对象数组)---
+1) 操作时间time (ISO8601 的日期和时间组合表示法):
+2) 操作人员姓名staff (字符串):
+3) 变更操作的具体描述description_histories (字符串):
+4) 解密原因decryptReason (字符串):
+5) 变更类型type_histories (枚举值):
+6) 变更前密级levelBefore (枚举值):
+7) 变更前保密期限durationBefore (对象):
+关键字列表keys (字符串数组): ---
