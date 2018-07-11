@@ -1,5 +1,7 @@
 package com.javaeasy.compare;						// 程序所在的包
 
+import javax.print.attribute.standard.Sides;
+
 public class Student {	
 	private String name;							// 姓名
 	private int number;								// 编号// 类名
@@ -35,5 +37,21 @@ public class Student {
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + number;
 		return result;
+	}
+	
+	public static void main(String[] args) {
+		Student s1 = new Student("Karlinglee", 1120161156);
+		Student s2 = new Student("KarlingLee", 1120161156);
+		
+		System.out.println("用equals() 方法判断s1 和s2 是否相等: " + 	s1.equals(s2));
+		int hashcode1 = s1.hashCode();
+		int hashcode2 = s2.hashCode();
+		System.out.println("s1 的hashcode 为: " + hashcode1);
+		System.out.println("s2 的hashcode 为: " + hashcode2);
+		if (hashcode1 == hashcode2) {
+			System.out.println("s1 与s2 的hashcode 值相等，故s1 与s2 相等");
+		} else {
+			System.out.println("s1 与s2 的hashcode 值不等，故s1 与s2 不等");
+		}
 	}
 }
