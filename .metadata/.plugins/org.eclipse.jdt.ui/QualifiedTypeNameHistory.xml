@@ -13,11 +13,25 @@
 <fullyQualifiedTypeName name="javax.crypto.SecretKey"/>
 <fullyQualifiedTypeName name="javax.crypto.spec.SecretKeySpec"/>
 <fullyQualifiedTypeName name="javax.crypto.Mac"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="java.lang.Class"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="com.Project_Button01.ButtonFrame.ColorAction"/>
 <fullyQualifiedTypeName name="javax.swing.text.html.HTMLEditorKit.HTMLTextAction"/>
 <fullyQualifiedTypeName name="javax.swing.text.html.HTML"/>
 <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Method"/>
+<fullyQualifiedTypeName name="java.lang.Class"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="com.jdbc_test.Connection"/>
+<fullyQualifiedTypeName name="com.jdbc_test.JDBCOperation"/>
+<fullyQualifiedTypeName name="com.jdbc_test.Conn"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.karlinglee93.jdbc_tst.util.Samp_dbUtil"/>
+<fullyQualifiedTypeName name="com.karlinglee93.jdbc_tst.dao.StudentDao"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.karlinglee93.jdbc_tst.po.Student"/>
+<fullyQualifiedTypeName name="org.omg.PortableServer.ID_ASSIGNMENT_POLICY_ID"/>
 </qualifiedTypeNameHistroy>
