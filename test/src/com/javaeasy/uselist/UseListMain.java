@@ -19,9 +19,13 @@ public class UseListMain {							// 例程类
 	public static void main(String[] args) {			// main()方法
 		List list;							// 创建一个List引用
 		list = new ArrayList();				// 让它指向一个ArrayList的实例
-		String str1 = "字符串1";			// （1）创建3个字符串实例
+		
+		// str1 - str3 是String 类引用
+		// "字符串1 - 3" 是String 类的对象
+		String str1 = "字符串1";				// （1）创建3个字符串实例
 		String str2 = "字符串2";
 		String str3 = "字符串3";
+		// ArrayList 对象中都是Object 引用
 		list.add(str1);						// （2）将第1个和第3个字符串的引
 											// 用放入列表中
 		list.add(str3);
