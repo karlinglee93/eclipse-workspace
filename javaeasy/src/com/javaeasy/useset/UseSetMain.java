@@ -26,5 +26,8 @@ public class UseSetMain {					// 例程类
 		boolean addResult = set.add(str3);		// 增加第3个元素
 		System.out.println("向集合中添加str3结果如下。" + addResult);		// 增加是否成功
 		printSet(set);							// 再次输出集合中的元素
+		addResult = set.remove(str3);
+		System.out.println("在集合中删除str3结果如下。" + addResult);
+		printSet(set);							// 再次输出集合中的元素
 	}
 }
