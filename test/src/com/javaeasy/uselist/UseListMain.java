@@ -19,7 +19,6 @@ public class UseListMain {							// 例程类
 	public static void main(String[] args) {			// main()方法
 		List list;							// 创建一个List引用
 		list = new ArrayList();				// 让它指向一个ArrayList的实例
-		
 		// str1 - str3 是String 类引用
 		// "字符串1 - 3" 是String 类的对象
 		String str1 = "字符串1";				// （1）创建3个字符串实例
