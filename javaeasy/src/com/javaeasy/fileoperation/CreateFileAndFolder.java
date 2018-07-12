@@ -6,9 +6,6 @@ import java.io.IOException;
 public class CreateFileAndFolder {					// 例程类
 
 	public static void main(String[] args) {		// main()方法
-		// 文件夹路径
-//		String folderPath = "C:" + File.separator + "javaeasy" + File.
-//		separator + "testingfolder";
 		String folderPath = "/Users/karlinglee/Documents/eclipse-workspace/javaeasy/src/com/javaeasy/fileoperation/testingfolder";
 		String fileName = "testingfile.txt";		// 文件名
 		
