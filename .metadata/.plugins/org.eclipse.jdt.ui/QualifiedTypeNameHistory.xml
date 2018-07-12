@@ -31,7 +31,10 @@
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="com.karlinglee93.jdbc_tst.util.Samp_dbUtil"/>
 <fullyQualifiedTypeName name="com.karlinglee93.jdbc_tst.dao.StudentDao"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.karlinglee93.jdbc_tst.po.Student"/>
 <fullyQualifiedTypeName name="org.omg.PortableServer.ID_ASSIGNMENT_POLICY_ID"/>
+<fullyQualifiedTypeName name="javax.net.ssl.HandshakeCompletedEvent"/>
+<fullyQualifiedTypeName name="javax.print.attribute.standard.Sides"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.javaeasy.compare.Student"/>
 </qualifiedTypeNameHistroy>
