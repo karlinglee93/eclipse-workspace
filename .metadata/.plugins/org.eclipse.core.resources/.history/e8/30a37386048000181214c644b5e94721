@@ -1,9 +1,0 @@
-第一次修改完毕，给龙哥看完以后，
-决定采用之前的main.jsp & test.html
-并将main.jsp的输出变为String的形式
-
-已将main.jsp, test.html 备份成main_bak.jsp, test_bak.html
-
-修改时，我将label中没有出现过的histories 和 keys删去，main.jsp, test.html
-
-并计划把没用到的所有甬余的关键字删去。main.jsp, test.html

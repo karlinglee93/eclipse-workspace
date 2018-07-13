@@ -1,4 +1,6 @@
 INDEX VERSION 1.130
+/Users/karlinglee/Documents/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4184783311.index
+/js_test/src
 /Users/karlinglee/Documents/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3160978916.index
 /jsp_test/src
 /Users/karlinglee/Documents/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1995197746.index

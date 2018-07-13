@@ -35,6 +35,7 @@
 <fullyQualifiedTypeName name="org.omg.PortableServer.ID_ASSIGNMENT_POLICY_ID"/>
 <fullyQualifiedTypeName name="javax.net.ssl.HandshakeCompletedEvent"/>
 <fullyQualifiedTypeName name="javax.print.attribute.standard.Sides"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.javaeasy.compare.Student"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
