@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>前端表单提交</title>
+</head>
+<body>
+<h1>表单提交</h1>
+<p id="level">
+密级:
+<select>
+<option>未加标</option>
+<option>机密</option>
+<option>绝密</option>
+</select>
+</p>
+<script>
+function next(){
+	tst = document.getElementById("level");
+	tst.innerHTML = "定密依据";
+}
+</script>
+<p>
+<button name="submit" type="submit" value="submit-true" onclick="next()">
+提交
+</button>
+</p>
+
+</body>
+</html>
