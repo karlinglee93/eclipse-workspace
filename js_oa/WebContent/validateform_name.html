@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>表单验证</title>
+</head>
+<body>
+<form name="nameForm" onsubmit="return validatename()">
+请输入名字：
+<input name="Name" type="text">
+<button type="submit">提交</button>
+<!-- <input type="submit" value="提交"> -->
+</form>
+<script type="text/javascript">
+	function validatename(){
+		var x = document.forms["nameForm"]["Name"].value;
+		if(x==null || x==""){
+			alert("请输入名字！")
+			return false;
+		}
+	}
+</script>
+</body>
+</html>

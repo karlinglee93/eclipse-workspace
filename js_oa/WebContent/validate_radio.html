@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function validateRadio(){
+	var bFlag = false;
+	var gender = document.getElementsByName('gender');
+	for (var i = 0; i < gender.length; i++) {
+		if (gender[i].checked) {
+		bFlag = true;
+		break;
+		}
+	}
+
+	if (bFlag == false) {
+		alert('性别不能为空，请选择！')
+		document.getElementById('gender').focus();
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+男<input type="radio" name="gender" id="gender" value="1" />
+女<input type="radio" name="gender" id="gender" value="2" />
+<button type="submit" onclick="validateRadio()">提交</button>
+</body>
+</html>

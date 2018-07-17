@@ -1,0 +1,62 @@
+<!-- 
+创建OA系统密标功能表单，
+这是对于HTML/JS 学习的实践
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OA Form</title>
+</head>
+<body>
+<h1>加密属性设置</h1>
+<form name="myForm" onsubmit="return validateForm()">
+加密密级：
+<select name="level" id="level" onclick="showbasises()">
+<option>--未选择--</option>
+<!-- 
+<option value="150" onclick="showbasises()">机密</option>
+<option value="180" onclick="showbasises()">绝密</option> 
+-->
+<option value="150">机密</option>
+<option value="180">绝密</option>
+</select>
+
+<div id="table_context"></div>
+</form>
+<script>
+var context="<table border=1><tr><th>单选</th><th>定密依据</th><th>秘密等级</th><th>保密期限</th><th>悉知范围</th></tr>"
+	context+="<tr><td><input type='radio'></td><td>全国药用罂粟的年度生产计划及相关数据</td><td>150</td><td>长期</td><td>有关领导、相关部门及承办人员</td></tr>	"
+	context+="<tr><td><input type='radio'></td><td>全国麻醉药品特需计划及相关数据</td><td>150</td><td>长期</td><td>有关领导、相关部门及承办人员</td></tr>"
+	context+="<tr><td><input type='radio'></td><td>涉及食品药品监管工作重大改革的内部考虑、对策建议等</td><td>150</td><td>20年</td><td>有关领导、相关部门及承办人员</td></tr>"
+	context+="<tr><td><input type='radio'></td><td>食品药品研制、生产中涉及产业整体安全和国家重大利益的科学技术</td><td>150</td><td>长期</td><td>有关企业、单位相关人员，监管部门相关领导及承办人</td></tr></table>"
+	context+="<button type='submit'>提交</button>";
+var context1="<table border=1 ><tr><th>单选</th><th>定密依据</th><th>秘密等级</th><th>保密期限</th><th>悉知范围</th></tr>"
+	context1+="<tr><td><input type='radio'></td><td>全国药用罂粟的年度生产计划及相关数据</td><td>180</td><td>长期</td><td>有关领导、相关部门及承办人员</td></tr>	"
+	context1+="<tr><td><input type='radio'></td><td>全国麻醉药品特需计划及相关数据</td><td>180</td><td>长期</td><td>有关领导、相关部门及承办人员</td></tr>"
+	context1+="<tr><td><input type='radio'></td><td>涉及食品药品监管工作重大改革的内部考虑、对策建议等</td><td>180</td><td>20年</td><td>有关领导、相关部门及承办人员</td></tr>"
+	context1+="<tr><td><input type='radio'></td><td>食品药品研制、生产中涉及产业整体安全和国家重大利益的科学技术</td><td>180</td><td>长期</td><td>有关企业、单位相关人员，监管部门相关领导及承办人</td></tr></table>"
+	context1+="<button type='submit'>提交</button>";
+	
+	function showbasises(){
+	var v;
+	v=document.getElementById("level").value;
+	if(v==150){
+		document.getElementById("table_context").innerHTML = context;
+	}else if(v==180){
+		document.getElementById("table_context").innerHTML = context1;
+	}
+	}
+</script>
+<script>
+function validateForm(){
+	alert("validateForm!")；
+	var bol = document.forms["myForm"]["Input"].value;
+	if(bol==null || bol==""){
+		alert("选项不能为空！")；
+		return false;
+	}
+}
+</script>
+</body>
+</html>
