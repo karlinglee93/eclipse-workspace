@@ -6,17 +6,16 @@
 <script>
 function validateRadio(){
 	var bFlag = false;
-	var gender = document.getElementsByName('gender');
+	var gender = document.getElementsByName("gender");
 	for (var i = 0; i < gender.length; i++) {
 		if (gender[i].checked) {
-		bFlag = true;
-		break;
+			bFlag = true;
+			break;
 		}
 	}
 
 	if (bFlag == false) {
 		alert('性别不能为空，请选择！')
-		document.getElementById('gender').focus();
 		return false;
 	}
 }
@@ -30,12 +29,12 @@ function validateRadio(){
 		<th>性别</th>
 	</tr>
 	<tr>
-		<th><input type="radio" name="gender" id="gender" value="1" /></th>
-		<th>男</th>
+		<td><input type="radio" name="gender" id="gender" value="1" /></td>
+		<td>男</td>
 	</tr>	
 	<tr>
-		<th><input type="radio" name="gender" id="gender" value="2" /></th>
-		<th>女</th>
+		<td><input type="radio" name="gender" id="gender" value="2" /></td>
+		<td>女</td>
 	</tr>			
 </table>
 <input type="submit" value="提交">
