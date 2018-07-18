@@ -7,5 +7,7 @@ INDEX VERSION 1.130
 /js_oa/src
 /Users/karlinglee/Documents/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2446259184.index
 /MyFirstJavaWebProject/src
+/Users/karlinglee/Documents/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/502421934.index
+/OA/src
 /Users/karlinglee/Documents/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3160978916.index
 /jsp_test/src

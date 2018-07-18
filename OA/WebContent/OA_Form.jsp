@@ -1,18 +1,15 @@
-<!-- 
-创建OA系统密标功能表单，
-这是对于HTML/JS 学习的实践
- -->
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="UTF-8">
-<title>OA Form</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
-<form onsubmit="return validateForm()">
+<form name="myForm" onsubmit="return validateForm()">
 <h1>加密属性设置</h1>
 加密密级：
-<!-- 虽然showBasises() 中依靠document.getElementById() 但实际上依靠的name -->
 <select name="level" id="level" onclick="showBasises()">
 <option>--未选择--</option>
 <option value="150">机密</option>
