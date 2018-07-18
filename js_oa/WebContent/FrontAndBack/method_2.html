@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form id="myform" method="post" action="http://images.byshop.com/wechat/imgFormUpload" enctype="multipart/form-data">
+      <input type="file" name="userfile[]"  multiple id="img_file">
+      <input type="submit" value="shangchuan">
+</form>
+<input type="button" value="ajax_submit" onclick="imgFormUpload()">
+<script>
+function imgFormUpload() {
+    $.ajax({
+         dataType: 'json',
+         url:http://images.byshop.com/wechat/imgFormUpload,
+         success: function (data) { 
+                alert("submit success");
+         }
+	});
+}
+</script>
+</body>
+</html>

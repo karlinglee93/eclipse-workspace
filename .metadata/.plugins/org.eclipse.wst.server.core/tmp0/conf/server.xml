@@ -126,7 +126,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="/Users/karlinglee/Documents/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Users/karlinglee/Documents/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/js_oa" path="/js_oa" reloadable="true" source="org.eclipse.jst.jee.server:js_oa"/></Host>
+      <Context docBase="/Users/karlinglee/Documents/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Users/karlinglee/Documents/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/js_oa" path="/js_oa" reloadable="true" source="org.eclipse.jst.jee.server:js_oa"/><Context docBase="/Users/karlinglee/Documents/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/MyFirstJavaWebProject" path="/MyFirstJavaWebProject" reloadable="true" source="org.eclipse.jst.jee.server:MyFirstJavaWebProject"/></Host>
     </Engine>
   </Service>
 </Server>
