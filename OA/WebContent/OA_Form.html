@@ -1,0 +1,25 @@
+<!-- 
+创建OA系统密标功能表单，
+这是对于HTML/JS 学习的实践
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OA Form</title>
+</head>
+<body>
+<form name="myForm" onsubmit="return validateForm()">
+<h1>加密属性设置</h1>
+加密密级：
+<select name="level" id="level" onclick="showBasises()">
+<option>--未选择--</option>
+<option value="150">机密</option>
+<option value="180">绝密</option>
+</select>
+<div id="table_context"></div>
+</form>
+<script src="showBasises.js"></script>
+<script src="validateForm.js"></script>
+</body>
+</html>
