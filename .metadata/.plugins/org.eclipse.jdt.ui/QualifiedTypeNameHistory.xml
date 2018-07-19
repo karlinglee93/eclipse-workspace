@@ -19,16 +19,11 @@
 <fullyQualifiedTypeName name="javax.swing.text.html.HTML"/>
 <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Method"/>
-<fullyQualifiedTypeName name="java.lang.Class"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="java.sql.DriverManager"/>
 <fullyQualifiedTypeName name="com.jdbc_test.Connection"/>
 <fullyQualifiedTypeName name="com.jdbc_test.JDBCOperation"/>
 <fullyQualifiedTypeName name="com.jdbc_test.Conn"/>
-<fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
-<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="com.karlinglee93.jdbc_tst.util.Samp_dbUtil"/>
 <fullyQualifiedTypeName name="com.karlinglee93.jdbc_tst.dao.StudentDao"/>
 <fullyQualifiedTypeName name="com.karlinglee93.jdbc_tst.po.Student"/>
@@ -37,5 +32,17 @@
 <fullyQualifiedTypeName name="javax.print.attribute.standard.Sides"/>
 <fullyQualifiedTypeName name="com.javaeasy.compare.Student"/>
 <fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.Class"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.RETURN"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
+<fullyQualifiedTypeName name="com.oa.util.OA_LabelUtil"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.oa.servlet.Receive"/>
+<fullyQualifiedTypeName name="com.oa.dao.LabelDao"/>
+<fullyQualifiedTypeName name="javafx.scene.control.Alert"/>
+<fullyQualifiedTypeName name="org.apache.jasper.tagplugins.jstl.core.Out"/>
 </qualifiedTypeNameHistroy>
