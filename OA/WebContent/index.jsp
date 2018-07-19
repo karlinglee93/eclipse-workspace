@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form name="myForm" onsubmit="return validateForm()">
+<form action="Receive" method="POST" onsubmit="return validateForm()">
 <h1>加密属性设置</h1>
 加密密级：
 <select name="level" id="level" onclick="showBasises()">
