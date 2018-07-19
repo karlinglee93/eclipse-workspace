@@ -41,26 +41,40 @@ public class Receive extends HttpServlet {
 		if (request.getParameter("choose") != null) {
 			System.out.println("My name is doGet()"); 
 			// 处理中文 获取浏览器的请求数据 String
-			String choose = new String(request.getParameter("choose")
-					.getBytes("ISO8859-1"), "UTF-8"); 
+			String choose = new String(request.getParameter("choose"));
 			// 指定服务器相应的编码格式为utf-8:支持中文
 			response.setContentType("text/html;charset=utf-8");
 			PrintWriter out = response.getWriter();
-			Gson gson = new Gson();//记得导入gson.jar
-			ArrayList<Map<String, String>> list = new ArrayList<Map<String, String>>();
- 
-			for (int i = 0; i < 10; i++) {//模拟数据库数据
-				Map<String, String> map = new HashMap<String, String>();
-				map.put("oneKey", "one");
-				map.put("twoKey", "tow");
-				map.put("thirdKey", "third");
-				map.put("chineseTest", "小明");
-				map.put("choose", choose);
-				list.add(map);
+			
+			int value = Integer.parseInt(choose);
+			switch (value) {
+			case 0:
+				out.print("label_0");
+				break;
+			case 1:
+				out.print("label_1");
+				break;
+			case 2:
+				out.print("label_2");
+				break;
+			case 3:
+				out.print("label_3");
+				break;
+			case 4:
+				out.print("label_4");
+				break;
+			case 5:
+				out.print("label_5");
+				break;
+			case 6:
+				out.print("label_6");
+				break;
+			case 7:
+				out.print("label_7");
+				break;
+			default:
+				out.print("查无此值");
 			}
-			String json = gson.toJson(list);
-			//输出json字符串给客户端
-			out.print(json);
 			out.flush();
 			out.close();
 		}
@@ -70,7 +84,7 @@ public class Receive extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		System.out.println("My name is doPost()"); 
 		doGet(request, response);
 	}
 
