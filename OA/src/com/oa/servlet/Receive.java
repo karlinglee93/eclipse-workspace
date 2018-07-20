@@ -1,7 +1,6 @@
 package com.oa.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +15,7 @@ import com.oa.dao.LabelDao;
 // 把下面的打开会报错，因为它是自动生成servlet maping的，与我之前设置的maping相冲突
 //@WebServlet("/Receive")
 public class Receive extends HttpServlet {
-//	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 	/**
      * @see HttpServlet#HttpServlet()
      */
@@ -39,14 +38,14 @@ public class Receive extends HttpServlet {
 			String choose = new String(request.getParameter("choose"));
 			// 指定服务器相应的编码格式为utf-8:支持中文
 			response.setContentType("text/html;charset=utf-8");
-			PrintWriter out = response.getWriter();
+//			PrintWriter out = response.getWriter();
 			
 			int value = Integer.parseInt(choose);
-			int Id1 = value+1
-					;
-			System.out.println(Id1);
+			int Id = value+1;
 			
-			LabelDao.getAll(Id1);
+			System.out.println("Receive.java, doGet(), Id = " + Id);
+			
+			LabelDao.getAll(Id);
 		}
 	}
 

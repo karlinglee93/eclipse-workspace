@@ -9,6 +9,9 @@ import com.oa.util.OA_LabelUtil;
 
 public class LabelDao {
 	public static void getAll(int Id) {
+		
+		System.out.println("LabelDao.java, getAll(), Id = " + Id);
+		
 		Connection conn = OA_LabelUtil.getConn();
 		String sql = "select * from Label where id =" + Id;
 

@@ -8,6 +8,9 @@ import com.mysql.jdbc.Connection;
 public class OA_LabelUtil {
 	// 连接数据库
 	public static Connection getConn() {
+		
+		System.out.println("OA_LabelUtil.java, getConn()");
+		
 		String driver = "com.mysql.jdbc.Driver";
 		String url = "jdbc:mysql://localhost:3306/oa_label";
 		String user = "root";

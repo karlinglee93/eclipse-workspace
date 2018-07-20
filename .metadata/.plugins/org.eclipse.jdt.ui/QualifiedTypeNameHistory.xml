@@ -37,7 +37,6 @@
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.RETURN"/>
 <fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
-<fullyQualifiedTypeName name="com.oa.util.OA_LabelUtil"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
@@ -45,4 +44,5 @@
 <fullyQualifiedTypeName name="com.oa.dao.LabelDao"/>
 <fullyQualifiedTypeName name="javafx.scene.control.Alert"/>
 <fullyQualifiedTypeName name="org.apache.jasper.tagplugins.jstl.core.Out"/>
+<fullyQualifiedTypeName name="com.oa.util.OA_LabelUtil"/>
 </qualifiedTypeNameHistroy>
