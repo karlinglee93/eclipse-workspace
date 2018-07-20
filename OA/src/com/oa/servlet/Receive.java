@@ -33,7 +33,7 @@ public class Receive extends HttpServlet {
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 		// 你的第一个接口请求返回json字符串
 		if (request.getParameter("choose") != null) {
-			System.out.println("My name is doGet()"); 
+//			System.out.println("My name is doGet()"); 
 			// 处理中文 获取浏览器的请求数据 String
 			String choose = new String(request.getParameter("choose"));
 			// 指定服务器相应的编码格式为utf-8:支持中文
@@ -43,7 +43,7 @@ public class Receive extends HttpServlet {
 			int value = Integer.parseInt(choose);
 			int Id = value+1;
 			
-			System.out.println("Receive.java, doGet(), Id = " + Id);
+//			System.out.println("Receive.java, doGet(), Id = " + Id);
 			
 			LabelDao.getAll(Id);
 		}
@@ -53,7 +53,7 @@ public class Receive extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("My name is doPost()"); 
+//		System.out.println("My name is doPost()"); 
 		doGet(request, response);
 	}
 

@@ -4,6 +4,7 @@ import com.oa.dao.LabelDao;
 
 public class LabelTest {
 	public static void main(String[] args) {
-		LabelDao.getAll(4);
+		int Id = 4;
+		LabelDao.getAll(Id);
 	}
 }

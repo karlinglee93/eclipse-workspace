@@ -9,7 +9,7 @@ public class OA_LabelUtil {
 	// 连接数据库
 	public static Connection getConn() {
 		
-		System.out.println("OA_LabelUtil.java, getConn()");
+//		System.out.println("OA_LabelUtil.java, getConn()");
 		
 		String driver = "com.mysql.jdbc.Driver";
 		String url = "jdbc:mysql://localhost:3306/oa_label";
@@ -35,9 +35,10 @@ public class OA_LabelUtil {
 		}
 		if (conn == null) {
 			System.out.println("无法创建mysql 数据库连接！");
-		} else {
-			System.out.println("创建mysql 数据库连接成功！");
-		}
+		} 
+//		else {
+//			System.out.println("创建mysql 数据库连接成功！");
+//		}
 		
 		return conn;
 	}
