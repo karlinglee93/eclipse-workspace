@@ -24,11 +24,12 @@ public class LabelDao {
 			
 			int col = rs.getMetaData().getColumnCount();
 	        while (rs.next()) {
-	            for (int i = 1; i <= col; i++) {
-	                System.out.print(rs.getString(i) + "\t");
-	                if ((i == 2) && (rs.getString(i).length() < 8)) {
-	                    System.out.print("\t");
-	                }
+	            for (int i = 2; i <= col; i++) {
+	                System.out.print(rs.getString(i));
+//	                System.out.print(rs.getString(i) + "\t");
+//	                if ((i == 2) && (rs.getString(i).length() < 8)) {
+//	                    System.out.print("\t");
+//	                }
 	             }
 	            System.out.println("");
 	        }
