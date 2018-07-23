@@ -23,5 +23,7 @@ function showBasises(){
 		document.getElementById("table_context").innerHTML = context_0;
 	}else if(v==180){
 		document.getElementById("table_context").innerHTML = context_1;
+	}else {
+		document.getElementById("table_context").innerHTML = null;
 	}
 }

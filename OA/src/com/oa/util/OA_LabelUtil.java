@@ -12,7 +12,7 @@ public class OA_LabelUtil {
 //		System.out.println("OA_LabelUtil.java, getConn()");
 		
 		String driver = "com.mysql.jdbc.Driver";
-		String url = "jdbc:mysql://localhost:3306/oa_label";
+		String url = "jdbc:mysql://localhost:3306/oa_label?useSSL=false";
 		String user = "root";
 		String password = "wsljn123";
 		Connection conn = null;
