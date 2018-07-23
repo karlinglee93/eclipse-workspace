@@ -22,6 +22,7 @@ public class LabelDao {
 			// 执行sql 语句
 			ResultSet rs = psmt.executeQuery();
 			
+			// 将ResultSet 解析成字符串
 			int col = rs.getMetaData().getColumnCount();
 	        while (rs.next()) {
 	            for (int i = 2; i <= col; i++) {
