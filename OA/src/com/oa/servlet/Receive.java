@@ -47,24 +47,27 @@ public class Receive extends HttpServlet {
 //			System.out.println("Receive.java, doGet(), Id = " + Id);
 			
 			LabelDao.getAll(Id);
-			int level = Label.getLevel();
-			int type = Label.getType();
-			String period = Label.getPeriod();
-			String name = Label.getName();
-			String procDefUniqueId = Label.getProcDefUniqueId();
-			String organs_name = Label.getOrgans_name();
-			String organs_id = Label.getOrgans_id();
-			String secretScope = Label.getSecretScope();
+			// 万物皆对象
+			Label lb = new Label();
 			
-//			System.out.println(Id);
-//			System.out.println(name);
-//			System.out.println(level);
-//			System.out.println(period);
-//			System.out.println(secretScope);
-//			System.out.println(type);
-//			System.out.println(procDefUniqueId);
-//			System.out.println(organs_id);
-//			System.out.println(organs_name);
+			int level = lb.getLevel();
+			int type = lb.getType();
+			String period = lb.getPeriod();
+			String name = lb.getName();
+			String procDefUniqueId = lb.getProcDefUniqueId();
+			String organs_name = lb.getOrgans_name();
+			String organs_id = lb.getOrgans_id();
+			String secretScope = lb.getSecretScope();
+			
+			System.out.println(Id);
+			System.out.println(name);
+			System.out.println(level);
+			System.out.println(period);
+			System.out.println(secretScope);
+			System.out.println(type);
+			System.out.println(procDefUniqueId);
+			System.out.println(organs_id);
+			System.out.println(organs_name);
 			String Label = 
 					"{\"algoSpecId\":1,\"algoSpecVersion\":1,\"authority\":{},"
                     + "\"basises\":{\"description\":\"1\","

@@ -22,31 +22,22 @@ public class LabelDao {
 			psmt = (PreparedStatement) conn.prepareStatement(sql);
 			// 执行sql 语句
 			ResultSet rs = psmt.executeQuery();
-			
+			// 万物皆对象
+			Label lb = new Label();
 			// 读取ResultSet 关键字个数
-			int col = rs.getMetaData().getColumnCount();
+//			int col = rs.getMetaData().getColumnCount();
 			// 解析ResultSet 为字符串
 			while (rs.next()) {
-				for (int i = 2; i <= col; i++) {
-					if (i == 2) {
-						Label.setName(rs.getString(i));
-					} else if (i == 3) {
-						Label.setLevel(rs.getInt(i));
-					} else if (i == 4) {
-						Label.setPeriod(rs.getString(i));
-					} else if (i == 5) {
-						Label.setSecretScope(rs.getString(i));
-					} else if (i == 6) {
-						Label.setType(rs.getInt(i));
-					} else if (i == 7) {
-						Label.setProcDefUniqueId(rs.getString(i));
-					} else if (i == 8) {
-						Label.setOrgans_id(rs.getString(i));
-					} else if (i == 9) {
-						Label.setOrgans_name(rs.getString(i));
-					}
-				}
+				lb.setName(rs.getString(2));
+				lb.setLevel(rs.getInt("level"));
+				lb.setPeriod(rs.getString(4));
+				lb.setSecretScope(rs.getString(5));
+				lb.setType(rs.getInt(6));
+				lb.setProcDefUniqueId(rs.getString(7));
+				lb.setOrgans_id(rs.getString(8));
+				lb.setOrgans_name(rs.getString(9));
 			}
+		
 //	        while (rs.next()) {
 //	            for (int i = 2; i <= col; i++) {
 //	                System.out.print(rs.getString(i));
