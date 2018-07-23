@@ -5,6 +5,7 @@ import java.sql.SQLException;
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
+import com.oa.po.Label;
 import com.oa.util.OA_LabelUtil;
 
 public class LabelDao {
@@ -22,18 +23,40 @@ public class LabelDao {
 			// 执行sql 语句
 			ResultSet rs = psmt.executeQuery();
 			
-			// 将ResultSet 解析成字符串
+			// 读取ResultSet 关键字个数
 			int col = rs.getMetaData().getColumnCount();
-	        while (rs.next()) {
-	            for (int i = 2; i <= col; i++) {
-	                System.out.print(rs.getString(i));
-//	                System.out.print(rs.getString(i) + "\t");
-//	                if ((i == 2) && (rs.getString(i).length() < 8)) {
-//	                    System.out.print("\t");
-//	                }
-	             }
-	            System.out.println("");
-	        }
+			// 解析ResultSet 为字符串
+			while (rs.next()) {
+				for (int i = 2; i <= col; i++) {
+					if (i == 2) {
+						Label.setName(rs.getString(i));
+					} else if (i == 3) {
+						Label.setLevel(rs.getInt(i));
+					} else if (i == 4) {
+						Label.setPeriod(rs.getString(i));
+					} else if (i == 5) {
+						Label.setSecretScope(rs.getString(i));
+					} else if (i == 6) {
+						Label.setType(rs.getInt(i));
+					} else if (i == 7) {
+						Label.setProcDefUniqueId(rs.getString(i));
+					} else if (i == 8) {
+						Label.setOrgans_id(rs.getString(i));
+					} else if (i == 9) {
+						Label.setOrgans_name(rs.getString(i));
+					}
+				}
+			}
+//	        while (rs.next()) {
+//	            for (int i = 2; i <= col; i++) {
+//	                System.out.print(rs.getString(i));
+////	                System.out.print(rs.getString(i) + "\t");
+////	                if ((i == 2) && (rs.getString(i).length() < 8)) {
+////	                    System.out.print("\t");
+////	                }
+//	             }
+////	            System.out.println("");
+//	        }
 	        
 	        psmt.close();
 	        conn.close();
