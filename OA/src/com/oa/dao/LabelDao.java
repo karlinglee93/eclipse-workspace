@@ -9,7 +9,7 @@ import com.oa.po.Label;
 import com.oa.util.OA_LabelUtil;
 
 public class LabelDao {
-	public static void getAll(int Id) {
+	public static void getAll(int Id, Label lb) {
 		
 //		System.out.println("LabelDao.java, getAll(), Id = " + Id);
 		
@@ -22,8 +22,8 @@ public class LabelDao {
 			psmt = (PreparedStatement) conn.prepareStatement(sql);
 			// 执行sql 语句
 			ResultSet rs = psmt.executeQuery();
-			// 万物皆对象
-			Label lb = new Label();
+//			// 万物皆对象
+//			Label lb = new Label();
 			// 读取ResultSet 关键字个数
 //			int col = rs.getMetaData().getColumnCount();
 			// 解析ResultSet 为字符串

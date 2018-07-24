@@ -45,10 +45,10 @@ public class Receive extends HttpServlet {
 			int Id = value+1;
 			
 //			System.out.println("Receive.java, doGet(), Id = " + Id);
-			
-			LabelDao.getAll(Id);
 			// 万物皆对象
 			Label lb = new Label();
+			LabelDao.getAll(Id, lb);
+
 			
 			int level = lb.getLevel();
 			int type = lb.getType();
@@ -59,15 +59,15 @@ public class Receive extends HttpServlet {
 			String organs_id = lb.getOrgans_id();
 			String secretScope = lb.getSecretScope();
 			
-			System.out.println(Id);
-			System.out.println(name);
-			System.out.println(level);
-			System.out.println(period);
-			System.out.println(secretScope);
-			System.out.println(type);
-			System.out.println(procDefUniqueId);
-			System.out.println(organs_id);
-			System.out.println(organs_name);
+//			System.out.println(Id);
+//			System.out.println(name);
+//			System.out.println(level);
+//			System.out.println(period);
+//			System.out.println(secretScope);
+//			System.out.println(type);
+//			System.out.println(procDefUniqueId);
+//			System.out.println(organs_id);
+//			System.out.println(organs_name);
 			String Label = 
 					"{\"algoSpecId\":1,\"algoSpecVersion\":1,\"authority\":{},"
                     + "\"basises\":{\"description\":\"1\","
