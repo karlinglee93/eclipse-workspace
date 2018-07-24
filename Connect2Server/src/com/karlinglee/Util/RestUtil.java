@@ -47,8 +47,9 @@ public class RestUtil {
 
 			RestUtil restUtil = new RestUtil();
 
-			String resultString = restUtil.load("http://192.168.10.89:8080/eoffice-restful/resources/sys/oaholiday",
-					"floor=first&year=2017&month=9&isLeader=N");
+			String resultString = restUtil.load("http://10.165.24.117:1257/api/v1/basis/find?",
+					"secretLevel=" + level);
+			System.out.println(resultString);
 
 		} catch (Exception e) {
 
