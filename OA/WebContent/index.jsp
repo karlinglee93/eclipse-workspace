@@ -12,8 +12,8 @@
 加密密级：
 <select name="level" id="level" onclick="showBasises()">
 <option>--未选择--</option>
+<option value="120">秘密</option>
 <option value="150">机密</option>
-<option value="180">绝密</option>
 </select>
 <div id="table_context"></div>
 </form>
