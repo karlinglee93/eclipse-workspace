@@ -29,7 +29,7 @@ public class LabelDao {
 			// 解析ResultSet 为字符串
 			while (rs.next()) {
 				lb.setName(rs.getString(2));
-				lb.setLevel(rs.getInt("level"));
+				lb.setLevel(rs.getInt(3));
 				lb.setPeriod(rs.getString(4));
 				lb.setSecretScope(rs.getString(5));
 				lb.setType(rs.getInt(6));
