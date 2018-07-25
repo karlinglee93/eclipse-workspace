@@ -31,6 +31,5 @@ public class JsonTest {
     String shuxue = jScore.getString("shuxue"); 
     //输出  80 90 
     System.out.println(yuwen+"  "+shuxue); 
-  } 
-    
+  }
 } 
