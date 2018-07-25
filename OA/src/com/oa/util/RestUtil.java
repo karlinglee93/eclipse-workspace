@@ -35,7 +35,7 @@ public class RestUtil {
 		while (null != (line = bReader.readLine())) {
 			resultStr += line;
 		}
-		System.out.println(resultStr);
+//		System.out.println(resultStr);
 		bReader.close();
 
 		return resultStr;

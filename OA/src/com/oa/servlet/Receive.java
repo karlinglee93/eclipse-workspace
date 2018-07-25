@@ -59,7 +59,7 @@ public class Receive extends HttpServlet {
 			
 			RestUtil ru = new RestUtil();
 			try {
-				ru.load(url, query);
+				System.out.println(ru.load(url, query));
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
