@@ -1,19 +1,19 @@
 package com.oa.util;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
 import com.oa.util.RestUtil;
@@ -119,7 +119,7 @@ public class Service {
 	* @param serverFieldName
 	* @return
 	* @throws Exception */
-	public static String uploadFileImpl(String serverUrl, String localFilePath, String serverFieldName) throws Exception {
+	public String uploadFileImpl(String serverUrl, String localFilePath, String serverFieldName) throws Exception {
 		String respStr = null;
 		CloseableHttpClient httpclient = HttpClients.createDefault(); 
 		try {
@@ -142,7 +142,12 @@ public class Service {
 			httpclient.close(); 
 		}
 //		System.out.println("resp=" + respStr);
-		return respStr; 
+		JSONArray jsonArray = JSONArray.fromObject(respStr);
+		JSONObject jObject = jsonArray.getJSONObject(0);
+		String filename = jObject.getString("filename");
+		
+		System.out.println(respStr);
+		return filename; 
 	}
 	
 	/**
@@ -193,4 +198,22 @@ public class Service {
 //		}
 //		httpclient.close(); 
 //	}
+	
+	public int sendHttpPost(String url, String body) throws Exception { 
+		CloseableHttpClient httpClient = HttpClients.createDefault();
+		HttpPost httpPost = new HttpPost(url);
+		List<BasicNameValuePair> pairList = new ArrayList<BasicNameValuePair>(); 
+		pairList.add(new BasicNameValuePair("label", body)); 
+		httpPost.setEntity(new UrlEncodedFormEntity(pairList, "utf-8")); 
+		CloseableHttpResponse response = httpClient.execute(httpPost); 
+		
+		int value = response.getStatusLine().getStatusCode();
+		System.out.println(value); 
+		HttpEntity entity = response.getEntity();
+		String responseContent = EntityUtils.toString(entity, "UTF-8"); 
+		System.out.println(responseContent);
+		response.close();
+		httpClient.close();
+		return value;
+	}
 }

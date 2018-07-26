@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.oa.util.Service;
 
+import javafx.scene.control.Alert;
+
 //import com.oa.dao.LabelDao;
 //import com.oa.po.Label;
 //import com.oa.util.RestUtil;
@@ -48,21 +50,35 @@ public class Receive extends HttpServlet {
 			String secretLevel = new String(request.getParameter("level"));
 			String choose = new String(request.getParameter("choose"));
 			
+			String serverUrl = "http://10.165.24.117:1257/api/v1/frame/upload/temp";
+			String localFilePath = "/Users/karlinglee/Documents/eclipse-workspace/OA/src/com/oa/others/ljn.doc";
+			String serverFieldName = "files";
+			String label = "";
+			String fileNameInServer = "";
+			String fileUrl;
 			Service service = new Service();
+
 			try {
-				String label = service.getBasises(secretLevel, choose);
+				label = service.getBasises(secretLevel, choose);
 				System.out.println(label);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
-			String serverUrl = "http://10.165.24.117:1257/api/v1/frame/upload/temp";
-			String localFilePath = "/Users/karlinglee/Documents/eclipse-workspace/OA/src/com/oa/others/ljn.doc";
-			String serverFieldName = "files";
 			try {
-				String fileNameInServer = Service.uploadFileImpl(serverUrl, localFilePath, serverFieldName);
+				fileNameInServer = service.uploadFileImpl(serverUrl, localFilePath, serverFieldName);
 				System.out.println(fileNameInServer);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			fileUrl = "http://10.165.24.117:1257/api/v1/label/" + fileNameInServer;
+			try {
+				int value = service.sendHttpPost(fileUrl, label);
+				if (value == 200) {
+					System.out.println("加密成功！");
+				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
