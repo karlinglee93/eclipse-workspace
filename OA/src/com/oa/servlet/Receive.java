@@ -56,6 +56,17 @@ public class Receive extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
+			String serverUrl = "http://10.165.24.117:1257/api/v1/frame/upload/temp";
+			String localFilePath = "/Users/karlinglee/Documents/eclipse-workspace/OA/src/com/oa/others/ljn.doc";
+			String serverFieldName = "files";
+			try {
+				String fileNameInServer = Service.uploadFileImpl(serverUrl, localFilePath, serverFieldName);
+				System.out.println(fileNameInServer);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 

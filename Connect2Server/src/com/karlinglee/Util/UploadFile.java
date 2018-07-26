@@ -16,14 +16,14 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
 public class UploadFile {
-/** *
-* @brief 上传文件
-* @details 详细说明
-* @param serverUrl
-* @param localFilePath
-* @param serverFieldName
-* @return
-* @throws Exception */
+	/** *
+	* @brief 上传文件
+	* @details 详细说明
+	* @param serverUrl
+	* @param localFilePath
+	* @param serverFieldName
+	* @return
+	* @throws Exception */
 	public static String uploadFileImpl(String serverUrl, String localFilePath, String serverFieldName) throws Exception {
 		String respStr = null;
 		CloseableHttpClient httpclient = HttpClients.createDefault(); 
@@ -67,39 +67,39 @@ public class UploadFile {
 		}
 		return strBuf.toString(); 
 	}
-	/**
-	* 下载文件
-	* @param url
-	* @param destFileName
-	* @throws ClientProtocolException * @throws IOException
-	*/
-	public static void getFile(String url, String destFileName) throws Exception {
-		// 生成一个 httpclient 对象
-		CloseableHttpClient httpclient = HttpClients.createDefault(); 
-		HttpGet httpget =new HttpGet(url);
-		HttpResponse response = httpclient.execute(httpget); 
-		HttpEntity entity = response.getEntity();
-		InputStream in = entity.getContent();
-		File file =new File(destFileName);
-		try{
-			FileOutputStream fout =new FileOutputStream(file); 
-			int l = -1;
-			byte[] tmp =new byte[1024];
-			while((l = in.read(tmp)) != -1) { 
-				fout.write(tmp,0, l);
-			} 
-			fout.flush(); 
-			fout.close();
-		}finally{
-			// 关闭低层流。
-			in.close(); 
-		}
-		httpclient.close(); 
-	}
+//	/**
+//	* 下载文件
+//	* @param url
+//	* @param destFileName
+//	* @throws ClientProtocolException * @throws IOException
+//	*/
+//	public static void getFile(String url, String destFileName) throws Exception {
+//		// 生成一个 httpclient 对象
+//		CloseableHttpClient httpclient = HttpClients.createDefault(); 
+//		HttpGet httpget =new HttpGet(url);
+//		HttpResponse response = httpclient.execute(httpget); 
+//		HttpEntity entity = response.getEntity();
+//		InputStream in = entity.getContent();
+//		File file =new File(destFileName);
+//		try{
+//			FileOutputStream fout =new FileOutputStream(file); 
+//			int l = -1;
+//			byte[] tmp =new byte[1024];
+//			while((l = in.read(tmp)) != -1) { 
+//				fout.write(tmp,0, l);
+//			} 
+//			fout.flush(); 
+//			fout.close();
+//		}finally{
+//			// 关闭低层流。
+//			in.close(); 
+//		}
+//		httpclient.close(); 
+//	}
 	
 	public static void main(String[] args) throws Exception{ 
 		//上传文件,将本机桌面上的文件上传至密标服务器 temp 文件夹下
-		uploadFileImpl("http://10.165.24.117:1257/api/v1/frame/upload/temp/","/Users/karlinglee/Documents/ljn.doc","files");
+		uploadFileImpl("http://10.165.24.117:1257/api/v1/frame/upload/temp/","/Users/karlinglee/Documents/eclipse-workspace/OA/src/com/oa/others/ljn.doc","files");
 		//下载文件,从密标服务器将 temp 文件夹下的 456.pdf 下载至本机桌面
 //		getFile("http://10.165.24.117:1258/api/v1/frame/download/temp/456.pdf","C:/Users/yanf a/Desktop/456.pdf");
 	} 
