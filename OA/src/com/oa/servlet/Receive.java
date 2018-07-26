@@ -39,7 +39,7 @@ public class Receive extends HttpServlet {
 		// 你的第一个接口请求返回json字符串
 		if (request.getParameter("choose") != null) {
 //			System.out.println("My name is doGet()"); 
-			String level = new String(request.getParameter("level"));
+			String secretLevel = new String(request.getParameter("level"));
 			String choose = new String(request.getParameter("choose"));
 			int value = Integer.parseInt(choose);
 			// 指定服务器相应的编码格式为utf-8:支持中文
@@ -54,7 +54,6 @@ public class Receive extends HttpServlet {
 //			} else {
 //				System.out.println("secretLevel is wrong! ");
 //			}
-			int secretLevel = Integer.parseInt(level);
 			
 			String url = "http://10.165.24.117:1257/api/v1/basis/find?";
 			String query = "secretLevel=" + secretLevel;
@@ -80,24 +79,22 @@ public class Receive extends HttpServlet {
 				String organs_id = jObject.getString("id");
 				String organs_name = jObject.getString("name");
 				
-				String procDefUniqueId = "000";
-				
-//				System.out.println(id + " _ " + name + " _ " + secretLevel 
-//						+ " _ " + secretScope + " _ " +  period + " _ " + type 
-//					    + " _ " + organs_id + " _ " + organs_name);
+				String basis_combination = jObject.getString("basis_combination");
+				jObject = JSONObject.fromObject(basis_combination);
+				String procDefUniqueId = jObject.getString("basis_id");
 				
 				String Label = 
 				"{\"algoSpecId\":1,\"algoSpecVersion\":1,\"authority\":{},"
                 + "\"basises\":{\"description\":\"1\","
                 + "\"normalItems\":["
                 + "{\"duration\":{\"period\":\"" + period + "\"},\"id\":\"" + id + "\","
-                + "\"level\":" + level + ",\"name\":\"" + name + "\"},"
+                + "\"level\":" + secretLevel + ",\"name\":\"" + name + "\"},"
                 + "\"type\":" + type + "},"
                 + "\"drafter\":{\"id\":\"0e887468-f53a-46f8-aa6d-2562b4b79da0\",\"name\":\"test\"},"
                 + "\"duration\":{\"condition\":\"1\",\"period\":\"" + period + "\"},"
                 + "\"fileAssetId\":\"\",\"fileContentId\":\"\","
                 + "\"fileUniqueId\":\"" + procDefUniqueId + "\",\"issuer\":{},\"labelSpecId\":1,\"labelSpecVersion\":1,"
-                + "\"level\":" + level + ","
+                + "\"level\":" + secretLevel + ","
                 + "\"organs\":[{\"id\":\"" + organs_id + "\",\"name\":\"" + organs_name + "\"}],"
                 + "\"scope\":{\"description\":\"" + secretScope + "\"},\"status\":80}";
 				
