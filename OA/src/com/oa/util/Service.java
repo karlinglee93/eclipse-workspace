@@ -55,7 +55,7 @@ public class Service {
         + "\"basises\":{\"description\":\"1\","
         + "\"normalItems\":["
         + "{\"duration\":{\"period\":\"" + period + "\"},\"id\":\"" + id + "\","
-        + "\"level\":" + secretLevel + ",\"name\":\"" + name + "\"},"
+        + "\"level\":" + secretLevel + ",\"name\":\"" + name + "\"}],"
         + "\"type\":" + type + "},"
         + "\"drafter\":{\"id\":\"0e887468-f53a-46f8-aa6d-2562b4b79da0\",\"name\":\"test\"},"
         + "\"duration\":{\"condition\":\"1\",\"period\":\"" + period + "\"},"
