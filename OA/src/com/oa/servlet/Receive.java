@@ -7,9 +7,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.oa.dao.LabelDao;
-import com.oa.po.Label;
+//import com.oa.dao.LabelDao;
+//import com.oa.po.Label;
 import com.oa.util.RestUtil;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 
 /**
  * Servlet implementation class Receive
@@ -36,14 +39,13 @@ public class Receive extends HttpServlet {
 		// 你的第一个接口请求返回json字符串
 		if (request.getParameter("choose") != null) {
 //			System.out.println("My name is doGet()"); 
-			// 处理中文 获取浏览器的请求数据 String
-//			String choose = new String(request.getParameter("choose"));
 			String level = new String(request.getParameter("level"));
+			String choose = new String(request.getParameter("choose"));
+			int value = Integer.parseInt(choose);
 			// 指定服务器相应的编码格式为utf-8:支持中文
 			response.setContentType("text/html;charset=utf-8");
 //			PrintWriter out = response.getWriter();
 			
-//			int value = Integer.parseInt(choose);
 //			int secretLevel = -1;
 //			if (value == 0 || value == 1 || value == 2 || value == 3) {
 //				secretLevel = 120;
@@ -59,7 +61,47 @@ public class Receive extends HttpServlet {
 			
 			RestUtil ru = new RestUtil();
 			try {
-				System.out.println(ru.load(url, query));
+				String label = ru.load(url, query);
+				JSONArray jArray = JSONArray.fromObject(label);
+				JSONObject jObject = jArray.getJSONObject(value);
+				String id = jObject.getString("id");
+				String name = jObject.getString("name");
+				
+				String secretLimit = jObject.getString("secretLimit");
+				JSONObject jObject1 = JSONObject.fromObject(secretLimit);
+				String period = jObject1.getString("period");
+				
+				String secretScope = jObject.getString("secretScope");
+				String type = jObject.getString("type");
+				
+				String combinactions = jObject.getString("combinactions");
+				jArray = JSONArray.fromObject(combinactions);
+				jObject = jArray.getJSONObject(0);
+				String organs_id = jObject.getString("id");
+				String organs_name = jObject.getString("name");
+				
+				String procDefUniqueId = "000";
+				
+//				System.out.println(id + " _ " + name + " _ " + secretLevel 
+//						+ " _ " + secretScope + " _ " +  period + " _ " + type 
+//					    + " _ " + organs_id + " _ " + organs_name);
+				
+				String Label = 
+				"{\"algoSpecId\":1,\"algoSpecVersion\":1,\"authority\":{},"
+                + "\"basises\":{\"description\":\"1\","
+                + "\"normalItems\":["
+                + "{\"duration\":{\"period\":\"" + period + "\"},\"id\":\"" + id + "\","
+                + "\"level\":" + level + ",\"name\":\"" + name + "\"},"
+                + "\"type\":" + type + "},"
+                + "\"drafter\":{\"id\":\"0e887468-f53a-46f8-aa6d-2562b4b79da0\",\"name\":\"test\"},"
+                + "\"duration\":{\"condition\":\"1\",\"period\":\"" + period + "\"},"
+                + "\"fileAssetId\":\"\",\"fileContentId\":\"\","
+                + "\"fileUniqueId\":\"" + procDefUniqueId + "\",\"issuer\":{},\"labelSpecId\":1,\"labelSpecVersion\":1,"
+                + "\"level\":" + level + ","
+                + "\"organs\":[{\"id\":\"" + organs_id + "\",\"name\":\"" + organs_name + "\"}],"
+                + "\"scope\":{\"description\":\"" + secretScope + "\"},\"status\":80}";
+				
+				System.out.println(Label);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
