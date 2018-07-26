@@ -7,7 +7,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class RestUtil {
-
 	public String load(String url, String query) throws Exception {
 		URL restURL = new URL(url);
 		/*
@@ -39,6 +38,5 @@ public class RestUtil {
 		bReader.close();
 
 		return resultStr;
-
 	}
 }

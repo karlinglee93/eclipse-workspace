@@ -7,7 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.oa.service.Basises;
+import com.oa.util.Service;
+
 //import com.oa.dao.LabelDao;
 //import com.oa.po.Label;
 //import com.oa.util.RestUtil;
@@ -44,12 +45,13 @@ public class Receive extends HttpServlet {
 			response.setContentType("text/html;charset=utf-8");
 //			PrintWriter out = response.getWriter();
 			
-			String choose = new String(request.getParameter("choose"));
 			String secretLevel = new String(request.getParameter("level"));
+			String choose = new String(request.getParameter("choose"));
 			
-			Basises bs = new Basises();
+			Service service = new Service();
 			try {
-				System.out.println(bs.getBasises(choose, secretLevel));
+				String label = service.getBasises(secretLevel, choose);
+				System.out.println(label);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
