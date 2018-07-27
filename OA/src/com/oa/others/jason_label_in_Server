@@ -1,0 +1,111 @@
+[
+
+{"id":"33d69790-3982-489b-bb88-6b8cf4bad197","name":"重大食品药品安全事件处置的内部考虑、处理原则、工作实施及相关信息","secretLevel":120,"secretLimitType":3,"secretLimit":"{\"classifiedTime\":\"\",\"period\":\"999999\",\"condition\":\"\",\"declassifiedTime\":\"\"}","secretScope":"有关领导、相关部门及承办人员","type":0,"sortWeight":0,"uploadAt":"2018-07-05T02:50:18.000Z","created_at":"2018-07-05T02:50:18.000Z","updated_at":"2018-07-05T02:50:18.000Z","deleted_at":null,"secretKeyWords":[],"combinactions":[{"id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d","name":"食药监定密依据","type":0,"sortWeight":0,"uploadAt":"2018-07-05T03:07:05.000Z","created_at":"2018-07-05T03:07:05.000Z","updated_at":"2018-07-05T03:07:05.000Z","basis_combination":{"created_at":"2018-07-05T03:07:05.000Z","updated_at":"2018-07-05T03:07:05.000Z","basis_id":"33d69790-3982-489b-bb88-6b8cf4bad197","combination_id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d"}}]},
+
+{"id":"602adc31-8cc9-4707-9f3f-b9190cc9a2be","name":"食品药品研制、生成中涉及产业安全和国家利益的科学技术","secretLevel":120,"secretLimitType":3,"secretLimit":"{\"classifiedTime\":\"\",\"period\":\"999999\",\"condition\":\"\",\"declassifiedTime\":\"\"}","secretScope":"有关企业、单位相关人员，监管部门相关领导及承办人","type":0,"sortWeight":0,"uploadAt":"2018-07-05T02:50:18.000Z","created_at":"2018-07-05T02:50:18.000Z","updated_at":"2018-07-05T02:50:18.000Z","deleted_at":null,"secretKeyWords":[],"combinactions":[{"id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d","name":"食药监定密依据","type":0,"sortWeight":0,"uploadAt":"2018-07-05T03:07:05.000Z","created_at":"2018-07-05T03:07:05.000Z","updated_at":"2018-07-05T03:07:05.000Z","basis_combination":{"created_at":"2018-07-05T03:07:05.000Z","updated_at":"2018-07-05T03:07:05.000Z","basis_id":"602adc31-8cc9-4707-9f3f-b9190cc9a2be","combination_id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d"}}]},
+
+{"id":"a3753901-92a8-4695-a1c9-9eda57214001","name":"对食品药品进出口有重大影响的食品药品安全信息","secretLevel":120,"secretLimitType":3,"secretLimit":"{\"classifiedTime\":\"\",\"period\":\"999999\",\"condition\":\"\",\"declassifiedTime\":\"\"}","secretScope":"有关领导、相关部门及承办人员、test、sysadmin","type":0,"sortWeight":0,"uploadAt":"2018-07-23T09:33:49.000Z","created_at":"2018-07-23T09:33:49.000Z","updated_at":"2018-07-23T09:33:49.000Z","deleted_at":null,"secretKeyWords":[],"combinactions":[{"id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d","name":"食药监定密依据","type":0,"sortWeight":0,"uploadAt":"2018-07-05T03:07:05.000Z","created_at":"2018-07-05T03:07:05.000Z","updated_at":"2018-07-05T03:07:05.000Z","basis_combination":{"created_at":"2018-07-23T09:33:49.000Z","updated_at":"2018-07-23T09:33:49.000Z","basis_id":"a3753901-92a8-4695-a1c9-9eda57214001","combination_id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d"}}]},
+
+{"id":"a6418d3b-7a8c-42f1-8f1d-05b4ede46b31","name":"涉及食品药品监管全局的重大方针政策、工作部署及相关信息","secretLevel":120,"secretLimitType":3,"secretLimit":"{\"classifiedTime\":\"\",\"period\":\"999999\",\"condition\":\"\",\"declassifiedTime\":\"\"}","secretScope":"有关领导、相关部门及承办人员","type":0,"sortWeight":0,"uploadAt":"2018-07-11T03:17:16.000Z","created_at":"2018-07-11T03:17:16.000Z","updated_at":"2018-07-11T03:17:16.000Z","deleted_at":null,"secretKeyWords":[],"combinactions":[{"id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d","name":"食药监定密依据","type":0,"sortWeight":0,"uploadAt":"2018-07-05T03:07:05.000Z","created_at":"2018-07-05T03:07:05.000Z","updated_at":"2018-07-05T03:07:05.000Z","basis_combination":{"created_at":"2018-07-11T03:17:16.000Z","updated_at":"2018-07-11T03:17:16.000Z","basis_id":"a6418d3b-7a8c-42f1-8f1d-05b4ede46b31","combination_id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d"}}]}
+
+]
+
+[
+
+{"id":"262f434d-7318-41d2-b0a6-90797bcc3b5a","name":"全国药用罂粟的年度生产计划及相关数据&#10;","secretLevel":150,"secretLimitType":3,"secretLimit":"{\"classifiedTime\":\"\",\"period\":\"999999\",\"condition\":\"\",\"declassifiedTime\":\"\"}","secretScope":"有关领导、相关部门及承办人员","type":0,"sortWeight":0,"uploadAt":"2018-07-05T02:50:18.000Z","created_at":"2018-07-05T02:50:18.000Z","updated_at":"2018-07-05T02:50:18.000Z","deleted_at":null,"secretKeyWords":[],"combinactions":[{"id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d","name":"食药监定密依据","type":0,"sortWeight":0,"uploadAt":"2018-07-05T03:07:05.000Z","created_at":"2018-07-05T03:07:05.000Z","updated_at":"2018-07-05T03:07:05.000Z","basis_combination":{"created_at":"2018-07-05T03:07:05.000Z","updated_at":"2018-07-05T03:07:05.000Z","basis_id":"262f434d-7318-41d2-b0a6-90797bcc3b5a","combination_id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d"}}]},
+
+{"id":"43357004-5a99-443f-9e89-4c967f1cfe43","name":"全国麻醉药品特需计划及相关数据","secretLevel":150,"secretLimitType":3,"secretLimit":"{\"classifiedTime\":\"\",\"period\":\"999999\",\"condition\":\"\",\"declassifiedTime\":\"\"}","secretScope":"有关领导、相关部门及承办人员","type":0,"sortWeight":0,"uploadAt":"2018-07-05T02:50:18.000Z","created_at":"2018-07-05T02:50:18.000Z","updated_at":"2018-07-05T02:50:18.000Z","deleted_at":null,"secretKeyWords":[],"combinactions":[{"id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d","name":"食药监定密依据","type":0,"sortWeight":0,"uploadAt":"2018-07-05T03:07:05.000Z","created_at":"2018-07-05T03:07:05.000Z","updated_at":"2018-07-05T03:07:05.000Z","basis_combination":{"created_at":"2018-07-05T03:07:05.000Z","updated_at":"2018-07-05T03:07:05.000Z","basis_id":"43357004-5a99-443f-9e89-4c967f1cfe43","combination_id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d"}}]},
+
+{"id":"a56b38d5-b700-4fe9-b816-9822c27de199","name":"涉及食品药品监管工作重大改革的内部考虑、对策建议等&#10;","secretLevel":150,"secretLimitType":0,"secretLimit":"{\"classifiedTime\":\"\",\"period\":\"200000\",\"condition\":\"\",\"declassifiedTime\":\"\"}","secretScope":"有关领导、相关部门及承办人员","type":0,"sortWeight":0,"uploadAt":"2018-07-05T02:50:18.000Z","created_at":"2018-07-05T02:50:18.000Z","updated_at":"2018-07-05T02:50:18.000Z","deleted_at":null,"secretKeyWords":[],"combinactions":[{"id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d","name":"食药监定密依据","type":0,"sortWeight":0,"uploadAt":"2018-07-05T03:07:05.000Z","created_at":"2018-07-05T03:07:05.000Z","updated_at":"2018-07-05T03:07:05.000Z","basis_combination":{"created_at":"2018-07-05T03:07:05.000Z","updated_at":"2018-07-05T03:07:05.000Z","basis_id":"a56b38d5-b700-4fe9-b816-9822c27de199","combination_id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d"}}]},
+
+{"id":"bc663de2-b576-4dd9-ac5f-2f4ab74eaee9","name":"食品药品研制、生产中涉及产业整体安全和国家重大利益的科学技术","secretLevel":150,"secretLimitType":3,"secretLimit":"{\"classifiedTime\":\"\",\"period\":\"999999\",\"condition\":\"\",\"declassifiedTime\":\"\"}","secretScope":"有关企业、单位相关人员，监管部门相关领导及承办人","type":0,"sortWeight":0,"uploadAt":"2018-07-05T02:50:18.000Z","created_at":"2018-07-05T02:50:18.000Z","updated_at":"2018-07-05T02:50:18.000Z","deleted_at":null,"secretKeyWords":[],"combinactions":[{"id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d","name":"食药监定密依据","type":0,"sortWeight":0,"uploadAt":"2018-07-05T03:07:05.000Z","created_at":"2018-07-05T03:07:05.000Z","updated_at":"2018-07-05T03:07:05.000Z","basis_combination":{"created_at":"2018-07-05T03:07:05.000Z","updated_at":"2018-07-05T03:07:05.000Z","basis_id":"bc663de2-b576-4dd9-ac5f-2f4ab74eaee9","combination_id":"b33f3cb7-9599-41a5-86ca-cf3007734d8d"}}]}]
+
+
+
+
+// 调用加密接口时报错，对比下标准label与我的label，前者为标准label，后者为我的。
+		String label = "{\"algoSpecId\":1,\"algoSpecVersion\":1,\"authority\":{},"
+				+ "\"basises\":{\"description\":\"1\",\"nor malItems\":[{\"duration\":{\"period\":\"999999\"},"
+				+ "\"id\":\"a494090c-3d3e-4b97-9304-62e05b40 baca\",\"level\":50,"
+				+ "\"name\":\"绩效管理有关信息 \"},{\"duration\":{\"period\":\"999999\"},"
+
+				+ "\"id\":\"ac803f05-6d3f-4167-8884-c6b1310dc5b1\",\"l evel\":50,"
+				+ "\"name\":\"公司人工成本信息及相关统计数据 \"}],\"type\":10},"
+
+				+ "\"drafter\":{\"id\":\"0e887468-f53a-46f8-aa6d-2562b4b79da0\","
+				+ "\"name\":\"tes t\"},\"duration\":{\"condition\":\"1\",\"period\":\"999999\"},"
+				+ "\"fileAssetId\":\"\",\"fileContentId\":\"\",\"fileUniqueId\":\"\","
+				+ "\"issuer\":{},\"labelSpecId\":1,\"labelSpecVersion\":1,"
+				+ "\"level\":180,\" organs\":[{\"id\":\"37bf5a52-d5af-4fdd-a901-a487d8925471\","
+				+ "\"name\":\"国务院 \"}],\"scope\":{\"description\":\"1\"},\"status\":110}";
+
+		String label = "{\"algoSpecId\":1,\"algoSpecVersion\":1,\"authority\":{},"
+				+ "\"basises\":{\"description\":\"1\",\"normalItems\":[{\"duration\":{\"period\":\"999999\"},"
+				+ "\"id\":\"a6418d3b-7a8c-42f1-8f1d-05b4ede46b31\",\"level\":120,"
+				+ "\"name\":\"涉及食品药品监管全局的重大方针政策、工作部署及相关信息\"},\"type\":0},"
+				+ "\"drafter\":{\"id\":\"0e887468-f53a-46f8-aa6d-2562b4b79da0\","
+				+ "\"name\":\"test\"},\"duration\":{\"condition\":\"1\",\"period\":\"999999\"},"
+				+ "\"fileAssetId\":\"\",\"fileContentId\":\"\",\"fileUniqueId\":\"a6418d3b-7a8c-42f1-8f1d-05b4ede46b31\","
+				+ "\"issuer\":{},\"labelSpecId\":1,\"labelSpecVersion\":1,"
+				+ "\"level\":120,\"organs\":[{\"id\":\"b33f3cb7-9599-41a5-86ca-cf3007734d8d\","
+				+ "\"name\":\"食药监定密依据\"}],\"scope\":{\"description\":\"有关领导、相关部门及承办人员\"},\"status\":80}";
+
+
+		String label = "{\"algoSpecId\":1,\"algoSpecVersion\":1,\"authority\":{},"
+		String label = "{\"algoSpecId\":1,\"algoSpecVersion\":1,\"authority\":{},"
+
+				+ "\"basises\":{\"description\":\"1\",\"normalItems\":[{\"duration\":{\"period\":\"999999\"},"
+				+ "\"basises\":{\"description\":\"1\",\"normalItems\":[{\"duration\":{\"period\":\"999999\"},"
+
+				+ "\"id\":\"a494090c-3d3e-4b97-9304-62e05b40 baca\",\"level\":50,"
+				+ "\"id\":\"a6418d3b-7a8c-42f1-8f1d-05b4ede46b31\",\"level\":120,"
+
+				+ "\"name\":\"绩效管理有关信息 \"},{\"duration\":{\"period\":\"999999\"},"
+				+ "\"name\":\"涉及食品药品监管 \"},\"type\":0},"
+
+				+ "\"id\":\"ac803f05-6d3f-4167-8884-c6b1310dc5b1\",\"level\":50,"
+				+ "\"id\":\"a6418d3b-7a8c-42f1-8f1d-05b4ede46b31\",\"level\":120,"
+
+				+ "\"name\":\"公司人工成本信息及相关统计数据\"}],\"type\":10},"
+				// 忘记加“]” !
+				+ "\"name\":\"涉及食品药品监管的史蒂夫史蒂夫\"},\"type\":0},"
+
+
+				+ "\"drafter\":{\"id\":\"0e887468-f53a-46f8-aa6d-2562b4b79da0\","
+				+ "\"drafter\":{\"id\":\"0e887468-f53a-46f8-aa6d-2562b4b79da0\","
+
+				+ "\"name\":\"test\"},\"duration\":{\"condition\":\"1\",\"period\":\"999999\"},"
+				+ "\"name\":\"test\"},\"duration\":{\"condition\":\"1\",\"period\":\"999999\"},"
+
+				+ "\"fileAssetId\":\"\",\"fileContentId\":\"\",\"fileUniqueId\":\"\","
+				+ "\"fileAssetId\":\"\",\"fileContentId\":\"\",\"fileUniqueId\":\"a6418d3b-7a8c-42f1-8f1d-05b4ede46b31\","
+
+				+ "\"issuer\":{},\"labelSpecId\":1,\"labelSpecVersion\":1,"
+				+ "\"issuer\":{},\"labelSpecId\":1,\"labelSpecVersion\":1,"
+
+				+ "\"level\":180,\"organs\":[{\"id\":\"37bf5a52-d5af-4fdd-a901-a487d8925471\","
+				+ "\"level\":120,\"organs\":[{\"id\":\"b33f3cb7-9599-41a5-86ca-cf3007734d8d\","
+
+				+ "\"name\":\"国务院\"}],\"scope\":{\"description\":\"1\"},\"status\":110}";
+				+ "\"name\":\"食药监\"}],\"scope\":{\"description\":\"1\"},\"status\":80}";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

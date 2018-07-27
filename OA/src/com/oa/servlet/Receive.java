@@ -1,6 +1,7 @@
 package com.oa.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -77,7 +78,15 @@ public class Receive extends HttpServlet {
 			try {
 				int value = service.sendHttpPost(fileUrl, label);
 				if (value == 200) {
-					System.out.println("加密成功！");
+					String out = "恭喜你！加密成功！";
+					System.out.println(out);
+					response.setContentType("text/html;charset=utf-8");
+					// response.getWriter().write()与PrintWriter.print()的区别
+//					response.getWriter().write(out);
+					PrintWriter pWriter = response.getWriter();
+					pWriter.println(out);
+					pWriter.flush();
+					pWriter.close();
 				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
