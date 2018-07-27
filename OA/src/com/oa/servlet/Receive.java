@@ -84,6 +84,9 @@ public class Receive extends HttpServlet {
 					// response.getWriter().write()与PrintWriter.print()的区别
 //					response.getWriter().write(out);
 					PrintWriter pWriter = response.getWriter();
+					// 输出是html类型
+					out += "</br>服务器中的文件名称为：</br>" + fileNameInServer + "</br>欢迎查找！";
+
 					pWriter.println(out);
 					pWriter.flush();
 					pWriter.close();
