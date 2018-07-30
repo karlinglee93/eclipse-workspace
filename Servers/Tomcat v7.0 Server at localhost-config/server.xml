@@ -126,7 +126,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="js_oa" path="/js_oa" reloadable="true" source="org.eclipse.jst.jee.server:js_oa"/><Context docBase="MyFirstJavaWebProject" path="/MyFirstJavaWebProject" reloadable="true" source="org.eclipse.jst.jee.server:MyFirstJavaWebProject"/><Context docBase="OA" path="/OA" reloadable="true" source="org.eclipse.jst.jee.server:OA"/><Context docBase="Connect2Server" path="/Connect2Server" reloadable="true" source="org.eclipse.jst.jee.server:Connect2Server"/></Host>
+      <Context docBase="js_oa" path="/js_oa" reloadable="true" source="org.eclipse.jst.jee.server:js_oa"/><Context docBase="MyFirstJavaWebProject" path="/MyFirstJavaWebProject" reloadable="true" source="org.eclipse.jst.jee.server:MyFirstJavaWebProject"/><Context docBase="OA" path="/OA" reloadable="true" source="org.eclipse.jst.jee.server:OA"/><Context docBase="Connect2Server" path="/Connect2Server" reloadable="true" source="org.eclipse.jst.jee.server:Connect2Server"/><Context docBase="MavenDemo_JavaWeb" path="/MavenDemo_JavaWeb" reloadable="true" source="org.eclipse.jst.j2ee.server:MavenDemo_JavaWeb"/></Host>
     </Engine>
   </Service>
 </Server>
