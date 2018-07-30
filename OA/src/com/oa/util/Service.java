@@ -1,3 +1,11 @@
+/**
+ * Service.java
+ * 主要存放业务逻辑处理时所需的方法。
+ * 
+ * getBasises()方法：通过传递由request.getParameter()方法所获取的前端密级secretLevel/单选项choose参数，返回加密标签字符串label；
+ * uploadFileImpl()方法：通过传递服务器上传文件的接口地址serverUrl/所要上传文件的路径localFilePath等信息参数，返回服务器中已加密的文件名字符串fileNameInServer；
+ * sendHttpPost()方法：通过传递label、fileNameInServer等信息参数，返回int加密结果；
+ */
 package com.oa.util;
 
 import java.io.File;
@@ -21,13 +29,23 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 public class Service {
+	/**
+	 * getBasises()
+	 * 通过传入的参数，获取服务器密标接口的Json串，并对其进行分解，拼接成新的字符串label。
+	 * 
+	 * @param secretLevel 前端密级
+	 * @param choose 前端单选项
+	 * @return label 字符串，为加密标签
+	 * @throws Exception
+	 */
 	public String getBasises(String secretLevel, String choose) throws Exception {
 		String url = "http://10.165.24.117:1257/api/v1/basis/find?";
 		String query = "secretLevel=" + secretLevel;
 		int value = Integer.parseInt(choose);
-		
+		// RestUtil类的load()方法：与服务器接口进行连接，并返回Json字符串
 		RestUtil ru = new RestUtil();
 		String label = ru.load(url, query);
+		// 对Json串进行分解
 		JSONArray jArray = JSONArray.fromObject(label);
 		JSONObject jObject = jArray.getJSONObject(value);
 		String id = jObject.getString("id");
@@ -49,7 +67,7 @@ public class Service {
 		String basis_combination = jObject.getString("basis_combination");
 		jObject = JSONObject.fromObject(basis_combination);
 		String procDefUniqueId = jObject.getString("basis_id");
-		
+		//对分解后的Json串进行合并，并拼接成label
 		String Label = 
 		"{\"algoSpecId\":1,\"algoSpecVersion\":1,\"authority\":{},"
         + "\"basises\":{\"description\":\"1\","
@@ -112,12 +130,14 @@ public class Service {
 	}
 	
 	/** *
-	* @brief 上传文件
-	* @details 详细说明
-	* @param serverUrl
-	* @param localFilePath
+	* @brief 上传本地文件至服务器
+	* @details 上传文件到服务器，
+	* 并对getRespString()方法所返回的存储在服务器上的文件信息（Json串）进行分解，
+	* 提取该文件在服务器中的文件名并返回。
+	* @param serverUrl 服务器接口地址
+	* @param localFilePath 所上传文件的本地地址
 	* @param serverFieldName
-	* @return
+	* @return 返回存储在服务器中的文件名
 	* @throws Exception */
 	public String uploadFileImpl(String serverUrl, String localFilePath, String serverFieldName) throws Exception {
 		String respStr = null;
@@ -133,6 +153,7 @@ public class Service {
 			try {
 //				System.out.println(response.getStatusLine()); 
 				HttpEntity resEntity = response.getEntity(); 
+				// 返回存储在服务器上的文件信息
 				respStr = getRespString(resEntity); 
 				EntityUtils.consume(resEntity);
 			} finally { 
@@ -141,13 +162,12 @@ public class Service {
 		} finally {
 			httpclient.close(); 
 		}
-//		System.out.println("resp=" + respStr);
 		JSONArray jsonArray = JSONArray.fromObject(respStr);
 		JSONObject jObject = jsonArray.getJSONObject(0);
-		String filename = jObject.getString("filename");
+		String fileNameInServer = jObject.getString("filename");
 		
 		System.out.println(respStr);
-		return filename; 
+		return fileNameInServer; 
 	}
 	
 	/**
@@ -169,36 +189,13 @@ public class Service {
 		return strBuf.toString(); 
 	}
 	
-//	/**
-//	* 下载文件
-//	* @param url
-//	* @param destFileName
-//	* @throws ClientProtocolException * @throws IOException
-//	*/
-//	public static void getFile(String url, String destFileName) throws Exception {
-//		// 生成一个 httpclient 对象
-//		CloseableHttpClient httpclient = HttpClients.createDefault(); 
-//		HttpGet httpget =new HttpGet(url);
-//		HttpResponse response = httpclient.execute(httpget); 
-//		HttpEntity entity = response.getEntity();
-//		InputStream in = entity.getContent();
-//		File file =new File(destFileName);
-//		try{
-//			FileOutputStream fout =new FileOutputStream(file); 
-//			int l = -1;
-//			byte[] tmp =new byte[1024];
-//			while((l = in.read(tmp)) != -1) { 
-//				fout.write(tmp,0, l);
-//			} 
-//			fout.flush(); 
-//			fout.close();
-//		}finally{
-//			// 关闭低层流。
-//			in.close(); 
-//		}
-//		httpclient.close(); 
-//	}
-	
+	/**
+	 * 加密方法
+	 * @param url 服务器接口地址
+	 * @param body 加密label
+	 * @return 加密状态
+	 * @throws Exception
+	 */
 	public int sendHttpPost(String url, String body) throws Exception { 
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		HttpPost httpPost = new HttpPost(url);
