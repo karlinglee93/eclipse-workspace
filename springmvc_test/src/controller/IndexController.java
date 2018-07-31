@@ -15,4 +15,11 @@ public class IndexController {
 		mav.addObject("message", "Hello Spring MVC");
 		return mav;
 	}
+
+	// 客户端跳转
+	@RequestMapping("/hello")
+	public ModelAndView jump() {
+		ModelAndView mav = new ModelAndView("redirect:/index");
+		return mav;
+	}
 }
