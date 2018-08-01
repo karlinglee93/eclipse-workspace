@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-public class IndexIntercepter extends HandlerInterceptorAdapter {  
+public class IndexInterceptor extends HandlerInterceptorAdapter {  
 
 	/** 
      * 在业务处理器处理请求之前被调用 
