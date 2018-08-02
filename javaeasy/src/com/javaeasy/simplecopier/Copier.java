@@ -9,7 +9,8 @@ public class Copier {						// 复印机类
 	public String getName() {				// 得到复印机的名字
 		return name;
 	}
-	public void copyPages (int pages) {	// 复印
+	// 线程同步
+	public synchronized void copyPages (int pages) {	// 复印
 		Thread employee = Thread.currentThread();
 											// 得到当前的“员工”线程
 		// 向控制台输出哪个员工正在使用哪个复印机
